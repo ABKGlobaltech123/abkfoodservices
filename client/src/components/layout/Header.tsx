@@ -1,0 +1,136 @@
+import { useState } from "react";
+import { Link, useLocation } from "wouter";
+import { ShoppingCart, User, Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useCart } from "@/contexts/CartContext";
+import { useAuth } from "@/contexts/AuthContext";
+import { LoginModal } from "@/components/auth/LoginModal";
+import { CartSidebar } from "@/components/cart/CartSidebar";
+
+export function Header() {
+  const [location] = useLocation();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
+  const { itemCount } = useCart();
+  const { user, isAuthenticated, logout } = useAuth();
+
+  const navigation = [
+    { name: "Home", href: "/" },
+    { name: "Menu", href: "/menu" },
+    { name: "Track Order", href: "/tracking" },
+    ...(user?.role === "admin" ? [{ name: "Admin", href: "/admin" }] : []),
+  ];
+
+  const isActive = (href: string) => {
+    if (href === "/" && location === "/") return true;
+    if (href !== "/" && location.startsWith(href)) return true;
+    return false;
+  };
+
+  return (
+    <>
+      <header className="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-center h-16">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Link href="/">
+                <h1 className="text-2xl font-heading font-bold text-primary cursor-pointer">
+                  CloudBite
+                </h1>
+              </Link>
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex space-x-8">
+              {navigation.map((item) => (
+                <Link key={item.name} href={item.href}>
+                  <a
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      isActive(item.href)
+                        ? "text-primary font-semibold"
+                        : "text-gray-700 hover:text-primary"
+                    }`}
+                  >
+                    {item.name}
+                  </a>
+                </Link>
+              ))}
+            </nav>
+
+            {/* Right side actions */}
+            <div className="flex items-center space-x-4">
+              {/* Cart Button */}
+              <Button
+                variant="ghost"
+                size="sm"
+                className="relative"
+                onClick={() => setIsCartOpen(true)}
+              >
+                <ShoppingCart className="h-5 w-5" />
+                {itemCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                    {itemCount}
+                  </span>
+                )}
+              </Button>
+
+              {/* User Menu */}
+              {isAuthenticated ? (
+                <div className="flex items-center space-x-2">
+                  <span className="text-sm text-gray-700 hidden sm:inline">
+                    Hi, {user?.firstName}
+                  </span>
+                  <Button variant="outline" size="sm" onClick={logout}>
+                    Logout
+                  </Button>
+                </div>
+              ) : (
+                <Button size="sm" onClick={() => setIsLoginOpen(true)}>
+                  Login
+                </Button>
+              )}
+
+              {/* Mobile menu button */}
+              <Button
+                variant="ghost"
+                size="sm"
+                className="md:hidden"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </Button>
+            </div>
+          </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <div className="md:hidden py-4 border-t">
+              <div className="flex flex-col space-y-2">
+                {navigation.map((item) => (
+                  <Link key={item.name} href={item.href}>
+                    <a
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                        isActive(item.href)
+                          ? "text-primary bg-orange-50"
+                          : "text-gray-700 hover:text-primary hover:bg-gray-50"
+                      }`}
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      {item.name}
+                    </a>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </header>
+
+      {/* Modals */}
+      <LoginModal open={isLoginOpen} onOpenChange={setIsLoginOpen} />
+      <CartSidebar open={isCartOpen} onOpenChange={setIsCartOpen} />
+    </>
+  );
+}
