@@ -1,0 +1,56 @@
+Here’s a complete prompt you can use to generate a **modern, fully-operational cloud kitchen website** — including both **frontend** (customer-facing) and **backend** (kitchen/admin-facing) features.
+
+---
+
+### 🔧 **Prompt: Modern Cloud Kitchen Website (Full Stack)**
+
+> **Act as a full-stack developer and UX designer.**
+>
+> Build a **modern, responsive cloud kitchen website** with both **frontend and backend** components. The site should support a **fully functional food delivery and kitchen management system**. It should be scalable, secure, and user-friendly across all devices. Use best practices for performance, SEO, and accessibility.
+>
+> ### ✅ Features Required:
+>
+> #### 🧑‍🍳 **Frontend (Customer Panel):**
+>
+> * Homepage with hero banner, categories, and featured items
+> * Menu browsing with filters (category, veg/non-veg, price, rating)
+> * Product detail page with add-ons, quantity selector
+> * Shopping cart with price breakdown (subtotal, tax, delivery fee)
+> * Secure checkout with address, contact, and payment integration (e.g., Razorpay/Stripe)
+> * Real-time order tracking (order placed → preparing → out for delivery → delivered)
+> * Customer login/signup (email + OTP/social login)
+> * Profile management (addresses, order history, favorites, feedback)
+> * Responsive mobile-first design with PWA capability (optional)
+> * WhatsApp/Chatbot support button
+>
+> #### 🛠️ **Backend (Admin/Kitchen Panel):**
+>
+> * Dashboard with KPIs: Orders Today, Revenue, Top Items, Customer Reviews
+> * Menu management (CRUD for categories, items, prices, add-ons, availability)
+> * Order management (live order queue with status updates and filters)
+> * Delivery assignment module (assign drivers or link with 3rd party API)
+> * Inventory management (stock levels, alerts, wastage logs)
+> * User management (customers, staff, roles, permissions)
+> * Promotions & discounts (coupon creation, time-based offers)
+> * Sales analytics and reports (daily/weekly/monthly trends, export to CSV)
+> * Feedback & support ticket system
+>
+> #### 📦 **Tech Stack Suggestions (Feel free to choose your own):**
+>
+> * **Frontend:** React.js / Next.js / Vue.js + Tailwind CSS / Material UI
+> * **Backend:** Node.js + Express / Django / Laravel
+> * **Database:** MongoDB / PostgreSQL / MySQL
+> * **Authentication:** JWT + OAuth (Google/Apple/Facebook)
+> * **Deployment:** Vercel/Netlify (frontend) + Render/Heroku/AWS (backend)
+> * **Extras:** Firebase for push notifications or analytics
+>
+> #### 🧠 Important Notes:
+>
+> * Use modular architecture (MVC or similar)
+> * Ensure secure API endpoints and data validation
+> * Use modern UI/UX trends (glassmorphism, neumorphism optional)
+> * Make the codebase clean, documented, and scalable
+
+---
+
+Let me know if you'd like a version tailored for a specific **framework** (like Next.js, Django, or Laravel), or if you want a **UI mockup prompt** for image generation as well.
