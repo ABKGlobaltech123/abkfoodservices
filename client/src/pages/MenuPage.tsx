@@ -97,7 +97,7 @@ export function MenuPage() {
                   <SelectValue placeholder="All Categories" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Categories</SelectItem>
+                  <SelectItem value="all">All Categories</SelectItem>
                   {mockCategories.map((category) => (
                     <SelectItem key={category.id} value={category.id}>
                       {category.name}
@@ -116,7 +116,7 @@ export function MenuPage() {
                   <SelectValue placeholder="All" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All</SelectItem>
+                  <SelectItem value="all">All</SelectItem>
                   <SelectItem value="true">Vegetarian</SelectItem>
                   <SelectItem value="false">Non-Vegetarian</SelectItem>
                 </SelectContent>
@@ -137,7 +137,7 @@ export function MenuPage() {
                   <SelectValue placeholder="Price Range" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">All Prices</SelectItem>
+                  <SelectItem value="all">All Prices</SelectItem>
                   <SelectItem value="0-200">Under ₹200</SelectItem>
                   <SelectItem value="200-400">₹200-400</SelectItem>
                   <SelectItem value="400-1000">₹400+</SelectItem>

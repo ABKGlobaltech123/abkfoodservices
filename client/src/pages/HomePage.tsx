@@ -26,23 +26,23 @@ export function HomePage() {
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <div className="inline-flex items-center px-4 py-2 bg-white/20 rounded-full text-sm font-medium mb-8 backdrop-blur-sm">
-            <svg className="w-4 h-4 mr-2 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full text-sm font-medium mb-8 backdrop-blur-sm border border-white/20">
+            <svg className="w-5 h-5 mr-2 text-green-300 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
             </svg>
-            Now delivering in under 30 minutes
+            🎉 Now Open! Fresh Kitchen, Fast Delivery
           </div>
           
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
-            Delicious Food, <br />
+            Your New Favorite <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-              Delivered Fast
+              Cloud Kitchen
             </span>
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 leading-relaxed">
-            Experience restaurant-quality meals prepared in our state-of-the-art cloud kitchen 
-            and delivered fresh to your doorstep.
+            We're excited to introduce CloudBite - your brand new cloud kitchen! 
+            Fresh, restaurant-quality meals prepared with love and delivered to your doorstep in under 30 minutes.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -74,12 +74,32 @@ export function HomePage() {
         </div>
       </section>
 
+      {/* Grand Opening Banner */}
+      <section className="py-8 bg-gradient-to-r from-orange-500 to-red-500 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+            <div className="flex items-center space-x-3">
+              <span className="text-2xl animate-bounce">🎉</span>
+              <h3 className="text-2xl font-bold font-heading">GRAND OPENING SPECIAL!</h3>
+              <span className="text-2xl animate-bounce">🎉</span>
+            </div>
+            <div className="flex items-center space-x-4 text-lg">
+              <span className="bg-white text-orange-500 px-4 py-2 rounded-full font-bold">25% OFF</span>
+              <span>your first order with code: WELCOME25</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Categories Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-heading font-bold text-center mb-12">
-            Browse Categories
-          </h3>
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-heading font-bold mb-4">Explore Our Fresh Menu</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Brand new recipes crafted with the finest ingredients in our newly opened cloud kitchen
+            </p>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
             {mockCategories.map((category) => (
               <Link key={category.id} href={`/menu?category=${category.id}`}>
@@ -109,9 +129,17 @@ export function HomePage() {
       {/* Featured Items Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-heading font-bold text-center mb-12">
-            Today's Specials
-          </h3>
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full text-primary font-medium mb-4">
+              <span className="mr-2">✨</span>
+              Opening Week Specials
+              <span className="ml-2">✨</span>
+            </div>
+            <h3 className="text-3xl font-heading font-bold mb-4">Try Our Signature Dishes</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Fresh from our new kitchen! These handpicked favorites showcase what makes CloudBite special
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredItems.map((item) => (
               <MenuItemCard key={item.id} item={item} />
@@ -171,8 +199,8 @@ export function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">10K+</div>
-              <div className="text-gray-300">Happy Customers</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">NEW</div>
+              <div className="text-gray-300">Fresh Kitchen</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary mb-2">50+</div>

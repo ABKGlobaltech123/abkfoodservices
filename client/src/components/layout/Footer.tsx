@@ -18,8 +18,8 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
-              Fresh, delicious meals delivered from our cloud kitchen to your doorstep. 
-              Experience the future of food delivery with CloudBite.
+              Welcome to CloudBite - your newly opened cloud kitchen! We're excited to serve you 
+              fresh, delicious meals prepared with love and delivered to your doorstep.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">
