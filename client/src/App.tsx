@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { CartProvider } from "@/contexts/CartContext";
 import { AuthProvider } from "@/contexts/AuthContext";
 import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import { HomePage } from "@/pages/HomePage";
 import { MenuPage } from "@/pages/MenuPage";
 import { OrderTrackingPage } from "@/pages/OrderTrackingPage";
@@ -27,11 +28,12 @@ function Router() {
 
 function AppContent() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       <Header />
-      <main className="pt-16">
+      <main className="pt-16 flex-1">
         <Router />
       </main>
+      <Footer />
       
       {/* Floating cart button - only show on non-admin pages */}
       <div className="fixed bottom-6 right-6 z-40">

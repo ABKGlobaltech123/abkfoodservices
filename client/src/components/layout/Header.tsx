@@ -46,15 +46,15 @@ export function Header() {
             <nav className="hidden md:flex space-x-8">
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href}>
-                  <a
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  <span
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
                       isActive(item.href)
                         ? "text-primary font-semibold"
                         : "text-gray-700 hover:text-primary"
                     }`}
                   >
                     {item.name}
-                  </a>
+                  </span>
                 </Link>
               ))}
             </nav>
@@ -110,8 +110,8 @@ export function Header() {
               <div className="flex flex-col space-y-2">
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>
-                    <a
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                    <span
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer ${
                         isActive(item.href)
                           ? "text-primary bg-orange-50"
                           : "text-gray-700 hover:text-primary hover:bg-gray-50"
@@ -119,7 +119,7 @@ export function Header() {
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
-                    </a>
+                    </span>
                   </Link>
                 ))}
               </div>
