@@ -27,7 +27,7 @@ export function Header() {
             <div className="flex items-center">
               <Link href="/">
                 <h1 className="text-2xl font-heading font-bold text-primary cursor-pointer">
-                  CloudBite
+                  ABK Food Services
                 </h1>
               </Link>
             </div>
@@ -53,7 +53,7 @@ export function Header() {
             <div className="flex items-center space-x-4">
               {/* Contact CTA */}
               <Button size="sm" className="hidden sm:inline-flex">
-                Call Now: +91 98765 43210
+                Call Now: +91 8341051124
               </Button>
 
               {/* Mobile menu button */}

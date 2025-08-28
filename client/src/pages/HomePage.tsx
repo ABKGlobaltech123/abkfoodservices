@@ -30,15 +30,16 @@ export function HomePage() {
           </div>
           
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
-            Deliciously Fresh <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-              Flavors Delivered
+              ABK Food Services
             </span>
+            <br />
+            <span className="text-3xl md:text-4xl lg:text-5xl">Authentic Flavors, Fresh Delivery</span>
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 leading-relaxed">
-            Experience CloudBite - where mouth-watering aromas meet exceptional taste! 
-            Our chefs craft every dish with premium ingredients, delivering restaurant-quality meals that'll make your taste buds dance.
+            Experience authentic flavors and restaurant-quality meals prepared with love. 
+            Fresh ingredients, traditional recipes, and fast delivery to your doorstep in Hyderabad.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -51,19 +52,25 @@ export function HomePage() {
               </Button>
             </Link>
             
-            <div className="flex items-center space-x-4 text-white/90">
+            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8 text-white/90">
               <div className="flex items-center space-x-2">
                 <svg className="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span className="font-medium">30-45 min delivery</span>
+                <span className="font-medium">+91 8341051124</span>
               </div>
-              <div className="w-1 h-1 bg-white/50 rounded-full"></div>
               <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-yellow-300" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                <svg className="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span className="font-medium">4.8★ rated</span>
+                <span className="font-medium">sales@abkfoodservices.com</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <svg className="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span className="font-medium">Kompally, Hyderabad</span>
               </div>
             </div>
           </div>
@@ -219,7 +226,7 @@ export function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl font-heading font-bold mb-6">Get In Touch</h3>
           <p className="text-xl mb-8 opacity-90">
-            We're excited to serve you! As a newly opening cloud kitchen, we'd love to hear from you and answer any questions about our fresh menu and delivery service.
+            We're excited to serve you delicious, authentic meals! Contact ABK Food Services for fresh, quality food delivered right to your doorstep in Hyderabad.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
@@ -230,7 +237,7 @@ export function HomePage() {
                 </svg>
               </div>
               <h4 className="text-lg font-semibold mb-2">Call Us</h4>
-              <p className="opacity-90">+91 98765 43210</p>
+              <p className="opacity-90">+91 8341051124</p>
               <p className="text-sm opacity-75 mt-1">Mon-Sun: 10 AM - 11 PM</p>
             </div>
             
@@ -241,7 +248,7 @@ export function HomePage() {
                 </svg>
               </div>
               <h4 className="text-lg font-semibold mb-2">Email Us</h4>
-              <p className="opacity-90">hello@cloudbite.com</p>
+              <p className="opacity-90">sales@abkfoodservices.com</p>
               <p className="text-sm opacity-75 mt-1">We reply within 2 hours</p>
             </div>
             
@@ -252,9 +259,9 @@ export function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
               </div>
-              <h4 className="text-lg font-semibold mb-2">Visit Kitchen</h4>
-              <p className="opacity-90">123 Kitchen Street</p>
-              <p className="text-sm opacity-75 mt-1">Food City, FC 12345</p>
+              <h4 className="text-lg font-semibold mb-2">Our Location</h4>
+              <p className="opacity-90">H501 Indis VB City</p>
+              <p className="text-sm opacity-75 mt-1">Kompally, Hyderabad, India</p>
             </div>
           </div>
 

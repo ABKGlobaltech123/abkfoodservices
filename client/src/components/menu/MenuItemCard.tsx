@@ -10,7 +10,7 @@ interface MenuItemCardProps {
 
 export function MenuItemCard({ item, onItemClick }: MenuItemCardProps) {
   const handleCallToOrder = () => {
-    window.open('tel:+919876543210', '_self');
+    window.open('tel:+918341051124', '_self');
   };
 
   return (
@@ -74,7 +74,7 @@ export function MenuItemCard({ item, onItemClick }: MenuItemCardProps) {
               <span>Call to Order</span>
             </div>
             <p className="text-xs text-gray-500 text-center">
-              +91 98765 43210
+              +91 8341051124
             </p>
           </div>
         </div>
