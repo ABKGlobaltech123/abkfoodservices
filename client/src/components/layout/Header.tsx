@@ -1,15 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { ShoppingCart, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useCart } from "@/contexts/CartContext";
-import { CartSidebar } from "@/components/cart/CartSidebar";
 
 export function Header() {
   const [location] = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isCartOpen, setIsCartOpen] = useState(false);
-  const { itemCount } = useCart();
 
   const navigation = [
     { name: "Home", href: "/" },
@@ -55,19 +51,9 @@ export function Header() {
 
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
-              {/* Cart Button */}
-              <Button
-                variant="ghost"
-                size="sm"
-                className="relative"
-                onClick={() => setIsCartOpen(true)}
-              >
-                <ShoppingCart className="h-5 w-5" />
-                {itemCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                    {itemCount}
-                  </span>
-                )}
+              {/* Contact CTA */}
+              <Button size="sm" className="hidden sm:inline-flex">
+                Call Now: +91 98765 43210
               </Button>
 
               {/* Mobile menu button */}
@@ -106,8 +92,7 @@ export function Header() {
         </div>
       </header>
 
-      {/* Cart Sidebar */}
-      <CartSidebar open={isCartOpen} onOpenChange={setIsCartOpen} />
+
     </>
   );
 }

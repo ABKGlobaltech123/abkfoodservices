@@ -1,10 +1,6 @@
-import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Star, Plus } from "lucide-react";
-import { useCart } from "@/contexts/CartContext";
-import { useToast } from "@/hooks/use-toast";
+import { Star, Phone } from "lucide-react";
 import type { MenuItem } from "@/types";
 
 interface MenuItemCardProps {
@@ -13,32 +9,8 @@ interface MenuItemCardProps {
 }
 
 export function MenuItemCard({ item, onItemClick }: MenuItemCardProps) {
-  const [isAdding, setIsAdding] = useState(false);
-  const { addItem } = useCart();
-  const { toast } = useToast();
-
-  const handleAddToCart = async (e: React.MouseEvent) => {
-    e.stopPropagation(); // Prevent triggering onItemClick
-    
-    if (!item.isAvailable) return;
-    
-    setIsAdding(true);
-    
-    try {
-      addItem(item, 1);
-      toast({
-        title: "Added to cart",
-        description: `${item.name} has been added to your cart`,
-      });
-    } catch (error) {
-      toast({
-        title: "Error",
-        description: "Failed to add item to cart",
-        variant: "destructive",
-      });
-    } finally {
-      setTimeout(() => setIsAdding(false), 1000);
-    }
+  const handleCallToOrder = () => {
+    window.open('tel:+919876543210', '_self');
   };
 
   return (
@@ -93,22 +65,18 @@ export function MenuItemCard({ item, onItemClick }: MenuItemCardProps) {
             )}
           </div>
           
-          <Button
-            onClick={handleAddToCart}
-            disabled={!item.isAvailable || isAdding}
-            className={`transition-all duration-200 ${
-              isAdding ? 'bg-green-500 hover:bg-green-600' : ''
-            }`}
-          >
-            {isAdding ? (
-              <>
-                <Plus className="h-4 w-4 mr-1" />
-                Added!
-              </>
-            ) : (
-              "Add to Cart"
-            )}
-          </Button>
+          <div className="flex flex-col space-y-2">
+            <div 
+              onClick={handleCallToOrder}
+              className="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium cursor-pointer hover:bg-primary/90 transition-colors text-center flex items-center justify-center space-x-2"
+            >
+              <Phone className="h-4 w-4" />
+              <span>Call to Order</span>
+            </div>
+            <p className="text-xs text-gray-500 text-center">
+              +91 98765 43210
+            </p>
+          </div>
         </div>
         
         {/* Tags */}

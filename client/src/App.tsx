@@ -3,8 +3,7 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { CartProvider } from "@/contexts/CartContext";
-import { AuthProvider } from "@/contexts/AuthContext";
+
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HomePage } from "@/pages/HomePage";
@@ -41,14 +40,10 @@ function AppContent() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <AuthProvider>
-        <CartProvider>
-          <TooltipProvider>
-            <AppContent />
-            <Toaster />
-          </TooltipProvider>
-        </CartProvider>
-      </AuthProvider>
+      <TooltipProvider>
+        <AppContent />
+        <Toaster />
+      </TooltipProvider>
     </QueryClientProvider>
   );
 }
