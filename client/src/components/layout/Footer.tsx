@@ -14,12 +14,12 @@ export function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
                 </div>
-                <span className="text-2xl font-bold font-heading">CloudBite</span>
+                <span className="text-2xl font-bold font-heading">ABK Food Services</span>
               </div>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
-              Welcome to CloudBite - your newly opened cloud kitchen! We're excited to serve you 
-              fresh, delicious meals prepared with love and delivered to your doorstep.
+              Welcome to ABK Food Services - your trusted food delivery partner in Hyderabad! We're excited to serve you 
+              authentic, delicious meals prepared with love and delivered fresh to your doorstep.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">
@@ -70,20 +70,20 @@ export function Footer() {
                 <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span className="text-gray-300">+91 98765 43210</span>
+                <span className="text-gray-300">+91 8341051124</span>
               </div>
               <div className="flex items-center space-x-3">
                 <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span className="text-gray-300">hello@cloudbite.com</span>
+                <span className="text-gray-300">sales@abkfoodservices.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <svg className="w-5 h-5 text-primary mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <span className="text-gray-300">123 Kitchen Street, Food City, FC 12345</span>
+                <span className="text-gray-300">H501 Indis VB City, Kompally, Hyderabad, India</span>
               </div>
             </div>
           </div>
@@ -92,7 +92,7 @@ export function Footer() {
         <div className="border-t border-gray-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-300 mb-4 md:mb-0">
-              © 2025 CloudBite. All rights reserved.
+              © 2025 ABK Food Services. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors text-sm">Privacy Policy</a>
