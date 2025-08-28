@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MenuItemCard } from "@/components/menu/MenuItemCard";
 import { mockCategories, mockMenuItems } from "@/data/mockData";
-import heroBackground from "@assets/generated_images/mouth-watering_food_hero_background_0df33153.png";
+import heroBackground from "@assets/generated_images/appetizing_Indian_food_hero_background_35225fd3.png";
 
 export function HomePage() {
   const featuredItems = mockMenuItems.slice(0, 3);
