@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MenuItemCard } from "@/components/menu/MenuItemCard";
 import { mockCategories, mockMenuItems } from "@/data/mockData";
+import heroBackground from "@assets/generated_images/mouth-watering_food_hero_background_0df33153.png";
 
 export function HomePage() {
   const featuredItems = mockMenuItems.slice(0, 3);
@@ -10,20 +11,15 @@ export function HomePage() {
   return (
     <div className="space-y-0">
       {/* Hero Section */}
-      <section className="relative gradient-hero text-white py-20 lg:py-32 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section className="relative text-white py-20 lg:py-32 overflow-hidden">
+        {/* Hero Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroBackground})` }}
+        ></div>
         
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-            <defs>
-              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
-                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5"/>
-              </pattern>
-            </defs>
-            <rect width="100" height="100" fill="url(#grid)" />
-          </svg>
-        </div>
+        {/* Dark Overlay for Text Readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full text-sm font-medium mb-8 backdrop-blur-sm border border-white/20">
@@ -34,15 +30,15 @@ export function HomePage() {
           </div>
           
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
-            Your New Favorite <br />
+            Deliciously Fresh <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-              Cloud Kitchen
+              Flavors Delivered
             </span>
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 leading-relaxed">
-            We're excited to introduce CloudBite - your brand new cloud kitchen! 
-            Fresh, restaurant-quality meals prepared with love and delivered to your doorstep in under 30 minutes.
+            Experience CloudBite - where mouth-watering aromas meet exceptional taste! 
+            Our chefs craft every dish with premium ingredients, delivering restaurant-quality meals that'll make your taste buds dance.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
