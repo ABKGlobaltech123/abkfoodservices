@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeSelector } from "@/components/theme/ThemeSelector";
 
 export function Header() {
   const [location] = useLocation();
@@ -51,6 +52,9 @@ export function Header() {
 
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
+              {/* Theme Selector */}
+              <ThemeSelector className="hidden md:block" />
+              
               {/* Contact CTA */}
               <Button size="sm" className="hidden sm:inline-flex">
                 Call Now: +91 98765 43210
