@@ -208,12 +208,63 @@ export function HomePage() {
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary mb-2">4.8</div>
-              <div className="text-gray-300">Average Rating</div>
+              <div className="text-gray-300">Target Rating</div>
             </div>
             <div>
               <div className="text-3xl md:text-4xl font-bold text-primary mb-2">30min</div>
-              <div className="text-gray-300">Avg Delivery Time</div>
+              <div className="text-gray-300">Delivery Promise</div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section for New Opening */}
+      <section className="py-16 bg-primary text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h3 className="text-3xl font-heading font-bold mb-6">Get In Touch</h3>
+          <p className="text-xl mb-8 opacity-90">
+            We're excited to serve you! As a newly opening cloud kitchen, we'd love to hear from you and answer any questions about our fresh menu and delivery service.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="text-center">
+              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold mb-2">Call Us</h4>
+              <p className="opacity-90">+91 98765 43210</p>
+              <p className="text-sm opacity-75 mt-1">Mon-Sun: 10 AM - 11 PM</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold mb-2">Email Us</h4>
+              <p className="opacity-90">hello@cloudbite.com</p>
+              <p className="text-sm opacity-75 mt-1">We reply within 2 hours</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h4 className="text-lg font-semibold mb-2">Visit Kitchen</h4>
+              <p className="opacity-90">123 Kitchen Street</p>
+              <p className="text-sm opacity-75 mt-1">Food City, FC 12345</p>
+            </div>
+          </div>
+
+          <div className="inline-flex items-center px-6 py-3 bg-white text-primary rounded-full text-sm font-medium">
+            <span className="mr-2">🎉</span>
+            Opening Special: Use code WELCOME25 for 25% off your first order!
           </div>
         </div>
       </section>

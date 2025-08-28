@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Plus, Minus, Trash2 } from "lucide-react";
 import { useCart } from "@/contexts/CartContext";
-import { useAuth } from "@/contexts/AuthContext";
 import { Link } from "wouter";
 
 interface CartSidebarProps {
@@ -13,18 +12,14 @@ interface CartSidebarProps {
 
 export function CartSidebar({ open, onOpenChange }: CartSidebarProps) {
   const { items, totalAmount, updateQuantity, removeItem, clearCart } = useCart();
-  const { isAuthenticated } = useAuth();
 
   const taxAmount = totalAmount * 0.1; // 10% tax
   const deliveryFee = totalAmount > 500 ? 0 : 30;
   const finalTotal = totalAmount + taxAmount + deliveryFee;
 
-  const handleCheckout = () => {
-    if (!isAuthenticated) {
-      // TODO: Open login modal or redirect to login
-      return;
-    }
-    // TODO: Navigate to checkout page
+  const handleOrderNow = () => {
+    // For static demo - show alert with order details
+    alert(`Order Summary:\n\nItems: ${items.length}\nSubtotal: ₹${totalAmount.toFixed(2)}\nTax: ₹${taxAmount.toFixed(2)}\nDelivery: ${deliveryFee === 0 ? 'FREE' : '₹' + deliveryFee}\nTotal: ₹${finalTotal.toFixed(2)}\n\nThis is a demo website. To place actual orders, please contact us directly!`);
     onOpenChange(false);
   };
 
@@ -121,16 +116,18 @@ export function CartSidebar({ open, onOpenChange }: CartSidebarProps) {
                 <div className="space-y-2">
                   <Button 
                     className="w-full" 
-                    onClick={handleCheckout}
-                    disabled={!isAuthenticated}
+                    onClick={handleOrderNow}
                   >
-                    {isAuthenticated ? "Proceed to Checkout" : "Login to Checkout"}
+                    Order Now
                   </Button>
                   {items.length > 0 && (
                     <Button variant="outline" className="w-full" onClick={clearCart}>
                       Clear Cart
                     </Button>
                   )}
+                  <p className="text-xs text-gray-500 text-center">
+                    This is a demo. For actual orders, contact us directly!
+                  </p>
                 </div>
               </div>
             </>

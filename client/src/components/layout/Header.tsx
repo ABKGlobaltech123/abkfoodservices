@@ -1,25 +1,19 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { ShoppingCart, User, Menu, X } from "lucide-react";
+import { ShoppingCart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/contexts/CartContext";
-import { useAuth } from "@/contexts/AuthContext";
-import { LoginModal } from "@/components/auth/LoginModal";
 import { CartSidebar } from "@/components/cart/CartSidebar";
 
 export function Header() {
   const [location] = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const { itemCount } = useCart();
-  const { user, isAuthenticated, logout } = useAuth();
 
   const navigation = [
     { name: "Home", href: "/" },
     { name: "Menu", href: "/menu" },
-    { name: "Track Order", href: "/tracking" },
-    ...(user?.role === "admin" ? [{ name: "Admin", href: "/admin" }] : []),
   ];
 
   const isActive = (href: string) => {
@@ -76,22 +70,6 @@ export function Header() {
                 )}
               </Button>
 
-              {/* User Menu */}
-              {isAuthenticated ? (
-                <div className="flex items-center space-x-2">
-                  <span className="text-sm text-gray-700 hidden sm:inline">
-                    Hi, {user?.firstName}
-                  </span>
-                  <Button variant="outline" size="sm" onClick={logout}>
-                    Logout
-                  </Button>
-                </div>
-              ) : (
-                <Button size="sm" onClick={() => setIsLoginOpen(true)}>
-                  Login
-                </Button>
-              )}
-
               {/* Mobile menu button */}
               <Button
                 variant="ghost"
@@ -128,8 +106,7 @@ export function Header() {
         </div>
       </header>
 
-      {/* Modals */}
-      <LoginModal open={isLoginOpen} onOpenChange={setIsLoginOpen} />
+      {/* Cart Sidebar */}
       <CartSidebar open={isCartOpen} onOpenChange={setIsCartOpen} />
     </>
   );

@@ -49,11 +49,7 @@ export function Footer() {
                   <span className="text-gray-300 hover:text-primary transition-colors cursor-pointer">Menu</span>
                 </Link>
               </li>
-              <li>
-                <Link href="/order-tracking">
-                  <span className="text-gray-300 hover:text-primary transition-colors cursor-pointer">Track Order</span>
-                </Link>
-              </li>
+
               <li>
                 <a href="#" className="text-gray-300 hover:text-primary transition-colors">About Us</a>
               </li>

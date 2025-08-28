@@ -9,8 +9,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { HomePage } from "@/pages/HomePage";
 import { MenuPage } from "@/pages/MenuPage";
-import { OrderTrackingPage } from "@/pages/OrderTrackingPage";
-import { AdminDashboard } from "@/pages/AdminDashboard";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -18,9 +16,6 @@ function Router() {
     <Switch>
       <Route path="/" component={HomePage} />
       <Route path="/menu" component={MenuPage} />
-      <Route path="/tracking" component={OrderTrackingPage} />
-      <Route path="/admin" component={AdminDashboard} />
-      <Route path="/admin/:section" component={AdminDashboard} />
       <Route component={NotFound} />
     </Switch>
   );
