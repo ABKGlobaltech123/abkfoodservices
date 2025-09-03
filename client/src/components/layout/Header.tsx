@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import abkLogo from "@assets/Untitled Project (2)_1756879874861.png";
 
 export function Header() {
   const [location] = useLocation();
@@ -26,9 +27,16 @@ export function Header() {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/">
-                <h1 className="text-2xl font-heading font-bold text-primary cursor-pointer">
-                  ABK Food Services
-                </h1>
+                <div className="flex items-center space-x-3 cursor-pointer">
+                  <img 
+                    src={abkLogo} 
+                    alt="ABK Food Services Logo" 
+                    className="w-10 h-10 hover:scale-105 transition-transform duration-200"
+                  />
+                  <h1 className="text-2xl font-heading font-bold text-primary">
+                    ABK Food Services
+                  </h1>
+                </div>
               </Link>
             </div>
 

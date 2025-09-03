@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MenuItemCard } from "@/components/menu/MenuItemCard";
 import { mockCategories, mockMenuItems } from "@/data/mockData";
 import heroBackground from "@assets/generated_images/appetizing_Indian_food_hero_background_35225fd3.png";
+import abkLogo from "@assets/Untitled Project (2)_1756879874861.png";
 
 export function HomePage() {
   const featuredItems = mockMenuItems.slice(0, 3);
@@ -33,8 +34,17 @@ export function HomePage() {
             <span className="text-lg font-semibold">🍔 NOW OPEN • Fresh Kitchen • Ready for Pickup</span>
           </div>
           
-          {/* Main Heading with Enhanced Typography */}
+          {/* Logo and Main Heading with Enhanced Typography */}
           <div className="mb-8">
+            {/* ABK Logo */}
+            <div className="flex justify-center mb-6">
+              <img 
+                src={abkLogo} 
+                alt="ABK Food Services Logo" 
+                className="w-32 h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-black mb-4 leading-tight">
               <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-red-400 drop-shadow-2xl">
                 ABK Food Services
