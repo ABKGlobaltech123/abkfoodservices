@@ -40,7 +40,7 @@ export function HomePage() {
                 ABK Food Services
               </span>
             </h1>
-            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white/95 tracking-wide">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white/95 tracking-wide">
               <span className="inline-block hover:scale-105 transition-transform duration-300">Authentic Flavors,</span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 inline-block hover:scale-105 transition-transform duration-300">
