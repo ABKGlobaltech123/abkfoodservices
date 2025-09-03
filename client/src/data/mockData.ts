@@ -434,8 +434,8 @@ export const mockMenuItems: MenuItem[] = [
     createdAt: new Date(),
   },
   {
-    id: "17",
-    categoryId: "6",
+    id: "21",
+    categoryId: "7",
     name: "Fresh Lime Soda",
     description: "Refreshing lime soda with mint and ice",
     price: "79.00",
@@ -480,7 +480,7 @@ export const mockOrders: OrderWithItems[] = [
     totalAmount: "450.00",
     deliveryAddress: null,
     createdAt: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago
-    deliveryInstructions: null,
+
     items: [
       {
         id: "1",
@@ -508,7 +508,7 @@ export const mockOrders: OrderWithItems[] = [
 
 export const mockAdminStats: AdminStats = {
   todayOrders: 67,
-  revenueToday: "12,450.00",
+
   totalOrders: 1247,
   totalRevenue: "89,450.00",
   totalCustomers: 423,

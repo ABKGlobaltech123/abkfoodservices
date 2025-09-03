@@ -29,7 +29,7 @@ export function MenuPage() {
         const query = filters.searchQuery.toLowerCase();
         const searchFields = [
           item.name.toLowerCase(),
-          item.description.toLowerCase(),
+          item.description?.toLowerCase() || "",
           ...(item.tags || []).map(tag => tag.toLowerCase()),
         ];
         if (!searchFields.some(field => field.includes(query))) {

@@ -70,38 +70,38 @@ export function Header() {
             </nav>
 
             {/* Right side actions */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-2 lg:gap-3">
               {/* Business Hours Badge */}
               <div className="hidden lg:flex items-center">
-                <div className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 px-3 py-2 rounded-full text-sm font-medium border border-blue-200 shadow-sm">
+                <div className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 px-2 lg:px-3 py-1 lg:py-2 rounded-full text-xs lg:text-sm font-medium border border-blue-200 shadow-sm whitespace-nowrap">
                   <span className="mr-1">⏰</span>
-                  10 AM - 11 PM
+                  10AM-11PM
                 </div>
               </div>
               
               {/* Contact Button */}
               <button 
                 onClick={() => window.open('tel:+918341051124', '_self')}
-                className="hidden sm:flex items-center bg-white border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-4 py-2 rounded-xl font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
+                className="hidden sm:flex items-center bg-white border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-2 lg:px-3 py-1 lg:py-2 rounded-lg font-semibold text-xs lg:text-sm transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap"
               >
-                <span className="mr-2">📞</span>
-                Call Now
+                <span className="mr-1 lg:mr-2">📞</span>
+                Call
               </button>
               
               {/* Order Button */}
               <Link href="/menu">
-                <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-5 py-2 rounded-xl font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-none">
-                  <span className="mr-2">🍽️</span>
-                  Order Now
+                <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-2 lg:px-4 py-1 lg:py-2 rounded-lg font-bold text-xs lg:text-sm shadow-lg hover:shadow-xl transition-all duration-300 border-none whitespace-nowrap">
+                  <span className="mr-1 lg:mr-2">🍽️</span>
+                  Order
                 </button>
               </Link>
 
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-200 border border-gray-300"
+                className="md:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-200 border border-gray-300 ml-2"
               >
-                {isMenuOpen ? <X className="h-5 w-5 text-gray-700" /> : <Menu className="h-5 w-5 text-gray-700" />}
+                {isMenuOpen ? <X className="h-4 w-4 text-gray-700" /> : <Menu className="h-4 w-4 text-gray-700" />}
               </button>
             </div>
           </div>
