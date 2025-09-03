@@ -69,7 +69,8 @@ export function HomePage() {
             <Button 
               variant="outline" 
               size="lg"
-              className="group bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 font-semibold text-lg px-10 py-6 rounded-2xl transition-all duration-300"
+              onClick={() => window.open('tel:+918341051124', '_self')}
+              className="group bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 font-semibold text-lg px-10 py-6 rounded-2xl transition-all duration-300 cursor-pointer"
             >
               <span className="mr-2">📞</span>
               Call to Order
