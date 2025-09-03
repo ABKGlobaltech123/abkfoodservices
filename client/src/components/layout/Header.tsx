@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import abkLogo from "@assets/Untitled Project (2)_1756879874861.png";
+import abkLogo from "@assets/image_1756924028269_1756924297647.jpeg";
 
 export function Header() {
   const [location] = useLocation();
