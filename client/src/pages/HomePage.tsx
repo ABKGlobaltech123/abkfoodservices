@@ -4,30 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { MenuItemCard } from "@/components/menu/MenuItemCard";
 import { mockCategories, mockMenuItems } from "@/data/mockData";
 import heroBackground from "@assets/generated_images/appetizing_Indian_food_hero_background_35225fd3.png";
-import { useState, useEffect } from "react";
 
 export function HomePage() {
   const featuredItems = mockMenuItems.slice(0, 3);
-  
-  // Hero food carousel images
-  const heroFoodImages = [
-    "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    "https://images.unsplash.com/photo-1527477396000-e27163b481c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    "https://images.unsplash.com/photo-1546793665-c74683f339c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600",
-    "https://images.unsplash.com/photo-1562967914-608f82629710?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-  ];
-  
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  
-  // Auto-scroll images every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroFoodImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [heroFoodImages.length]);
 
   return (
     <div className="space-y-0">
@@ -47,38 +26,7 @@ export function HomePage() {
         <div className="absolute top-40 right-20 w-32 h-32 bg-orange-400/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-20 left-20 w-24 h-24 bg-red-400/20 rounded-full blur-xl animate-pulse"></div>
         
-        {/* Floating Food Images Carousel */}
-        <div className="absolute right-10 top-1/2 transform -translate-y-1/2 hidden lg:block">
-          <div className="relative w-80 h-80">
-            {heroFoodImages.map((image, index) => (
-              <div
-                key={index}
-                className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                  index === currentImageIndex
-                    ? 'opacity-100 scale-100 rotate-0'
-                    : index === (currentImageIndex - 1 + heroFoodImages.length) % heroFoodImages.length
-                    ? 'opacity-60 scale-90 rotate-12 translate-x-8 translate-y-8'
-                    : index === (currentImageIndex + 1) % heroFoodImages.length
-                    ? 'opacity-60 scale-90 -rotate-12 -translate-x-8 translate-y-8'
-                    : 'opacity-0 scale-75'
-                }`}
-              >
-                <img
-                  src={image}
-                  alt="Delicious food"
-                  className="w-full h-full object-cover rounded-3xl shadow-2xl border-4 border-white/20"
-                />
-              </div>
-            ))}
-            
-            {/* Floating animation elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-yellow-400 rounded-full animate-bounce opacity-80"></div>
-            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-red-400 rounded-full animate-pulse opacity-80"></div>
-            <div className="absolute top-1/2 -left-8 w-4 h-4 bg-green-400 rounded-full animate-ping opacity-60"></div>
-          </div>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 py-20 lg:text-left lg:max-w-3xl">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 py-20">
           {/* Status Badge */}
           <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500/30 to-blue-500/30 rounded-full text-sm font-medium mb-12 backdrop-blur-md border border-white/30 shadow-2xl hover:scale-105 transition-transform duration-300">
             <div className="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
@@ -104,7 +52,7 @@ export function HomePage() {
 
           
           {/* Enhanced CTA Section */}
-          <div className="flex flex-col lg:flex-row gap-8 justify-center lg:justify-start items-center mb-16">
+          <div className="flex flex-col lg:flex-row gap-8 justify-center items-center mb-16">
             <Link href="/menu">
               <Button 
                 size="lg" 
