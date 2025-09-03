@@ -11,7 +11,7 @@ export function HomePage() {
   return (
     <div className="space-y-0">
       {/* Hero Section */}
-      <section className="relative text-white py-20 lg:py-32 overflow-hidden">
+      <section className="relative text-white min-h-screen flex items-center overflow-hidden">
         {/* Hero Background Image */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -19,59 +19,109 @@ export function HomePage() {
         ></div>
         
         {/* Dark Overlay for Text Readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-primary/40 to-black/80"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-full text-sm font-medium mb-8 backdrop-blur-sm border border-white/20">
-            <svg className="w-5 h-5 mr-2 text-green-300 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
-            </svg>
-            🎉 Now Open! Fresh Kitchen, Ready for Pickup
+        {/* Floating Shapes */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-yellow-400/20 rounded-full blur-xl animate-bounce"></div>
+        <div className="absolute top-40 right-20 w-32 h-32 bg-orange-400/20 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 left-20 w-24 h-24 bg-red-400/20 rounded-full blur-xl animate-pulse"></div>
+        
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10 py-20">
+          {/* Status Badge */}
+          <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500/30 to-blue-500/30 rounded-full text-sm font-medium mb-12 backdrop-blur-md border border-white/30 shadow-2xl hover:scale-105 transition-transform duration-300">
+            <div className="w-3 h-3 bg-green-400 rounded-full mr-3 animate-pulse"></div>
+            <span className="text-lg font-semibold">🍔 NOW OPEN • Fresh Kitchen • Ready for Pickup</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 to-orange-300">
-              ABK Food Services
-            </span>
-            <br />
-            <span className="text-3xl md:text-4xl lg:text-5xl">Authentic Flavors, Fresh & Fast</span>
-          </h2>
+          {/* Main Heading with Enhanced Typography */}
+          <div className="mb-8">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-black mb-4 leading-tight">
+              <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-red-400 drop-shadow-2xl">
+                ABK Food Services
+              </span>
+            </h1>
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white/95 tracking-wide">
+              <span className="inline-block hover:scale-105 transition-transform duration-300">Authentic Flavors,</span>
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 inline-block hover:scale-105 transition-transform duration-300">
+                Fresh & Fast
+              </span>
+            </h2>
+          </div>
           
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 leading-relaxed">
-            Experience authentic fast food prepared with love and fresh ingredients. 
-            Quick preparation, delicious meals, ready for pickup at our Hyderabad location.
+          {/* Enhanced Description */}
+          <p className="text-xl md:text-2xl lg:text-3xl mb-12 max-w-4xl mx-auto text-white/90 leading-relaxed font-light">
+            Experience <span className="font-semibold text-yellow-300">premium fast food</span> prepared with love and fresh ingredients.
+            <br className="hidden md:block" />
+            Quick preparation, delicious meals, ready for pickup at our 
+            <span className="font-semibold text-orange-300"> Hyderabad location</span>.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          {/* Enhanced CTA Section */}
+          <div className="flex flex-col lg:flex-row gap-8 justify-center items-center mb-16">
             <Link href="/menu">
-              <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100 shadow-xl hover:shadow-2xl transition-all duration-300 text-lg px-8 py-4">
+              <Button 
+                size="lg" 
+                className="group bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold text-xl px-12 py-6 rounded-2xl shadow-2xl hover:shadow-orange-500/25 transform hover:-translate-y-1 transition-all duration-300 border-2 border-white/20"
+              >
+                <span className="mr-3">🍽️</span>
                 Order Now
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                <svg className="w-6 h-6 ml-3 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
                 </svg>
               </Button>
             </Link>
             
-            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8 text-white/90">
-              <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <span className="font-medium">+91 8341051124</span>
+            <Button 
+              variant="outline" 
+              size="lg"
+              className="group bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 font-semibold text-lg px-10 py-6 rounded-2xl transition-all duration-300"
+            >
+              <span className="mr-2">📞</span>
+              Call to Order
+            </Button>
+          </div>
+          
+          {/* Modern Contact Info Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center justify-center mb-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <span className="font-medium">sales@abkfoodservices.com</span>
+              <h3 className="font-bold text-lg mb-1">Call Us Now</h3>
+              <p className="text-yellow-300 font-semibold text-lg">+91 8341051124</p>
+              <p className="text-sm text-white/70 mt-1">Available 10 AM - 11 PM</p>
+            </div>
+            
+            <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center justify-center mb-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span className="font-medium">Kompally, Hyderabad</span>
+              <h3 className="font-bold text-lg mb-1">Email Us</h3>
+              <p className="text-blue-300 font-semibold text-lg break-all">sales@abkfoodservices.com</p>
+              <p className="text-sm text-white/70 mt-1">Quick Response Guaranteed</p>
+            </div>
+            
+            <div className="group bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+              <div className="flex items-center justify-center mb-3">
+                <div className="w-12 h-12 bg-gradient-to-r from-red-400 to-orange-500 rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </div>
               </div>
+              <h3 className="font-bold text-lg mb-1">Visit Us</h3>
+              <p className="text-orange-300 font-semibold text-lg">H501 Indis VB City</p>
+              <p className="text-sm text-white/70 mt-1">Kompally, Hyderabad</p>
             </div>
           </div>
         </div>
