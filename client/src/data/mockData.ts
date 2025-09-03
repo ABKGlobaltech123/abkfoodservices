@@ -96,7 +96,7 @@ export const mockMenuItems: MenuItem[] = [
     description: "Crispy vegetable patty with fresh vegetables and tangy sauce",
     price: "179.00",
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1525059696034-4967a729002e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
     isVegetarian: true,
     isAvailable: true,
     preparationTime: 10,
