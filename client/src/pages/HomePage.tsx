@@ -3,20 +3,49 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { MenuItemCard } from "@/components/menu/MenuItemCard";
 import { mockCategories, mockMenuItems } from "@/data/mockData";
+import { useState, useEffect } from "react";
 import heroBackground from "@assets/generated_images/appetizing_Indian_food_hero_background_35225fd3.png";
 
 export function HomePage() {
   const featuredItems = mockMenuItems.slice(0, 3);
+  
+  // Background images array - using high-quality food images
+  const backgroundImages = [
+    heroBackground, // Current background
+    "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080", // Pizza
+    "https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080", // Burger
+    "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080", // Food spread
+    "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080", // Cooking
+    "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&h=1080", // Fast food
+  ];
+  
+  const [currentBgIndex, setCurrentBgIndex] = useState(0);
+  
+  // Change background every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentBgIndex((prevIndex) => 
+        (prevIndex + 1) % backgroundImages.length
+      );
+    }, 5000);
+    
+    return () => clearInterval(interval);
+  }, [backgroundImages.length]);
 
   return (
     <div className="space-y-0">
       {/* Hero Section */}
       <section className="relative text-white min-h-screen flex items-center overflow-hidden">
-        {/* Hero Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroBackground})` }}
-        ></div>
+        {/* Dynamic Hero Background Images */}
+        {backgroundImages.map((bgImage, index) => (
+          <div 
+            key={index}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+              index === currentBgIndex ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{ backgroundImage: `url(${bgImage})` }}
+          ></div>
+        ))}
         
         {/* Dark Overlay for Text Readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-primary/40 to-black/80"></div>
