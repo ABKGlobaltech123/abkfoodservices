@@ -1,0 +1,14 @@
+Ready to push the 404 fix to GitHub:
+
+Files changed:
+✅ public/404.html - Created SPA redirect handler
+✅ client/index.html - Added SPA routing script + updated title/meta  
+✅ .github/workflows/deploy.yml - Updated to copy 404.html correctly
+✅ client/src/data/mockData.ts - Fixed Spicy Chicken Burger image
+
+Run these commands in terminal:
+git add .
+git commit -m "Fix 404 error on page refresh - add SPA support for GitHub Pages"
+git push origin main
+
+This will fix the issue where refreshing /menu page shows 404 on abkfoodservices.com
