@@ -70,49 +70,39 @@ export function Header() {
             </nav>
 
             {/* Right side actions */}
-            <div className="flex items-center space-x-3">
-              {/* Quick Actions */}
-              <div className="hidden lg:flex items-center space-x-2">
-                <Button 
-                  size="sm" 
-                  variant="ghost"
-                  className="text-gray-600 hover:text-orange-600 hover:bg-orange-50 transition-all duration-200 font-medium"
-                >
+            <div className="flex items-center space-x-2">
+              {/* Business Hours Badge */}
+              <div className="hidden lg:flex items-center">
+                <div className="bg-gradient-to-r from-blue-100 to-indigo-100 text-blue-700 px-3 py-2 rounded-full text-sm font-medium border border-blue-200 shadow-sm">
                   <span className="mr-1">⏰</span>
                   10 AM - 11 PM
-                </Button>
+                </div>
               </div>
               
-              {/* Contact CTA */}
-              <Button 
-                size="sm" 
+              {/* Contact Button */}
+              <button 
                 onClick={() => window.open('tel:+918341051124', '_self')}
-                className="hidden sm:inline-flex bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-4 py-2 rounded-full shadow-lg hover:shadow-green-500/25 transition-all duration-300 border-none"
+                className="hidden sm:flex items-center bg-white border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-4 py-2 rounded-xl font-semibold text-sm transition-all duration-300 shadow-md hover:shadow-lg hover:scale-105"
               >
                 <span className="mr-2">📞</span>
                 Call Now
-              </Button>
+              </button>
               
-              {/* Order Now CTA */}
+              {/* Order Button */}
               <Link href="/menu">
-                <Button 
-                  size="sm"
-                  className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold px-4 py-2 rounded-full shadow-lg hover:shadow-orange-500/25 transition-all duration-300 border-none"
-                >
-                  <span className="mr-1">🍽️</span>
+                <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-5 py-2 rounded-xl font-bold text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-none">
+                  <span className="mr-2">🍽️</span>
                   Order Now
-                </Button>
+                </button>
               </Link>
 
               {/* Mobile menu button */}
-              <Button
-                variant="ghost"
-                size="sm"
-                className="md:hidden"
+              <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="md:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-200 border border-gray-300"
               >
-                {isMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-              </Button>
+                {isMenuOpen ? <X className="h-5 w-5 text-gray-700" /> : <Menu className="h-5 w-5 text-gray-700" />}
+              </button>
             </div>
           </div>
 
