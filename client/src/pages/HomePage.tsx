@@ -49,13 +49,7 @@ export function HomePage() {
             </h2>
           </div>
           
-          {/* Enhanced Description */}
-          <p className="text-xl md:text-2xl lg:text-3xl mb-12 max-w-4xl mx-auto text-white/90 leading-relaxed font-light">
-            Experience <span className="font-semibold text-yellow-300">premium fast food</span> prepared with love and fresh ingredients.
-            <br className="hidden md:block" />
-            Quick preparation, delicious meals, ready for pickup at our 
-            <span className="font-semibold text-orange-300"> Hyderabad location</span>.
-          </p>
+
           
           {/* Enhanced CTA Section */}
           <div className="flex flex-col lg:flex-row gap-8 justify-center items-center mb-16">
