@@ -18,8 +18,8 @@ export function Footer() {
               </div>
             </Link>
             <p className="text-gray-300 mb-4 max-w-md">
-              Welcome to ABK Food Services - your trusted food delivery partner in Hyderabad! We're excited to serve you 
-              authentic, delicious meals prepared with love and delivered fresh to your doorstep.
+              Welcome to ABK Food Services - your trusted fast food partner in Hyderabad! We're excited to serve you 
+              delicious meals prepared with love and ready for quick pickup.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">

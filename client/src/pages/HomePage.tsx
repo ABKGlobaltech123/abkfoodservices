@@ -26,7 +26,7 @@ export function HomePage() {
             <svg className="w-5 h-5 mr-2 text-green-300 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
             </svg>
-            🎉 Now Open! Fresh Kitchen, Fast Delivery
+            🎉 Now Open! Fresh Kitchen, Ready for Pickup
           </div>
           
           <h2 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
@@ -34,12 +34,12 @@ export function HomePage() {
               ABK Food Services
             </span>
             <br />
-            <span className="text-3xl md:text-4xl lg:text-5xl">Authentic Flavors, Fresh Delivery</span>
+            <span className="text-3xl md:text-4xl lg:text-5xl">Authentic Flavors, Fresh & Fast</span>
           </h2>
           
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90 leading-relaxed">
-            Experience authentic flavors and restaurant-quality meals prepared with love. 
-            Fresh ingredients, traditional recipes, and fast delivery to your doorstep in Hyderabad.
+            Experience authentic fast food prepared with love and fresh ingredients. 
+            Quick preparation, delicious meals, ready for pickup at our Hyderabad location.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -140,7 +140,7 @@ export function HomePage() {
             </div>
             <h3 className="text-3xl font-heading font-bold mb-4">Try Our Signature Dishes</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Fresh from our new kitchen! These handpicked favorites showcase what makes CloudBite special
+              Fresh from our new kitchen! These handpicked favorites showcase what makes ABK Food Services special
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -160,9 +160,9 @@ export function HomePage() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-heading font-bold mb-4">Why Choose CloudBite?</h3>
+            <h3 className="text-3xl font-heading font-bold mb-4">Why Choose ABK Food Services?</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Experience the perfect blend of taste, quality, and convenience with our cloud kitchen service
+              Experience the perfect blend of taste, quality, and convenience with our fast food pickup service
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -172,8 +172,8 @@ export function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h4 className="text-xl font-heading font-semibold mb-3">Fast Delivery</h4>
-              <p className="text-gray-600">Fresh food delivered to your doorstep in 30-45 minutes with real-time tracking</p>
+              <h4 className="text-xl font-heading font-semibold mb-3">Quick Pickup</h4>
+              <p className="text-gray-600">Fresh food prepared fast and ready for pickup in 10-20 minutes at our Hyderabad location</p>
             </div>
             <div className="text-center group">
               <div className="bg-secondary/10 w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary/20 transition-colors">
@@ -214,8 +214,8 @@ export function HomePage() {
               <div className="text-gray-300">Target Rating</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">30min</div>
-              <div className="text-gray-300">Delivery Promise</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">15min</div>
+              <div className="text-gray-300">Pickup Ready</div>
             </div>
           </div>
         </div>
@@ -226,7 +226,7 @@ export function HomePage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h3 className="text-3xl font-heading font-bold mb-6">Get In Touch</h3>
           <p className="text-xl mb-8 opacity-90">
-            We're excited to serve you delicious, authentic meals! Contact ABK Food Services for fresh, quality food delivered right to your doorstep in Hyderabad.
+            We're excited to serve you delicious fast food! Contact ABK Food Services for fresh, quality meals ready for quick pickup in Hyderabad.
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
