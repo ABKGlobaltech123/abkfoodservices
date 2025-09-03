@@ -122,7 +122,7 @@ export const mockMenuItems: MenuItem[] = [
     description: "Hot and spicy fried chicken with jalapenos and spicy mayo",
     price: "219.00",
     originalPrice: null,
-    image: "https://images.unsplash.com/photo-1553979459-d2229ba7433a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+    image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
     isVegetarian: false,
     isAvailable: true,
     preparationTime: 14,
