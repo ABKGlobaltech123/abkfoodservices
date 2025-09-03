@@ -31,7 +31,7 @@ export function Header() {
                   <img 
                     src={abkLogo} 
                     alt="ABK Food Services Logo" 
-                    className="w-10 h-10 hover:scale-105 transition-transform duration-200"
+                    className="w-12 h-12 hover:scale-105 transition-transform duration-200"
                   />
                   <h1 className="text-2xl font-heading font-bold text-primary">
                     ABK Food Services
