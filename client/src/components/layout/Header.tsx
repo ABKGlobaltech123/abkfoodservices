@@ -54,7 +54,7 @@ export function Header() {
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href}>
                   <span
-                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer relative overflow-hidden ${
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer relative overflow-hidden focus:outline-none ${
                       isActive(item.href)
                         ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg"
                         : "text-gray-700 hover:bg-gradient-to-r hover:from-orange-100 hover:to-red-100 hover:text-orange-700"
@@ -82,7 +82,7 @@ export function Header() {
               {/* Contact Button */}
               <button 
                 onClick={() => window.open('tel:+918341051124', '_self')}
-                className="hidden sm:flex items-center bg-white border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-2 lg:px-3 py-1 lg:py-2 rounded-lg font-semibold text-xs lg:text-sm transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap"
+                className="hidden sm:flex items-center bg-white border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white px-2 lg:px-3 py-1 lg:py-2 rounded-lg font-semibold text-xs lg:text-sm transition-all duration-300 shadow-md hover:shadow-lg whitespace-nowrap focus:outline-none focus:ring-0"
               >
                 <span className="mr-1 lg:mr-2">📞</span>
                 Call
@@ -90,7 +90,7 @@ export function Header() {
               
               {/* Order Button */}
               <Link href="/menu">
-                <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-2 lg:px-4 py-1 lg:py-2 rounded-lg font-bold text-xs lg:text-sm shadow-lg hover:shadow-xl transition-all duration-300 border-none whitespace-nowrap">
+                <button className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-2 lg:px-4 py-1 lg:py-2 rounded-lg font-bold text-xs lg:text-sm shadow-lg hover:shadow-xl transition-all duration-300 border-none whitespace-nowrap focus:outline-none focus:ring-0">
                   <span className="mr-1 lg:mr-2">🍽️</span>
                   Order
                 </button>
@@ -99,7 +99,7 @@ export function Header() {
               {/* Mobile menu button */}
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="md:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-200 border border-gray-300 ml-2"
+                className="md:hidden p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition-all duration-200 border border-gray-300 ml-2 focus:outline-none focus:ring-0"
               >
                 {isMenuOpen ? <X className="h-4 w-4 text-gray-700" /> : <Menu className="h-4 w-4 text-gray-700" />}
               </button>
@@ -113,7 +113,7 @@ export function Header() {
                 {navigation.map((item) => (
                   <Link key={item.name} href={item.href}>
                     <span
-                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer ${
+                      className={`block px-3 py-2 rounded-md text-base font-medium transition-colors cursor-pointer focus:outline-none ${
                         isActive(item.href)
                           ? "text-primary bg-orange-50"
                           : "text-gray-700 hover:text-primary hover:bg-gray-50"
