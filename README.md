@@ -36,9 +36,18 @@ A modern fast food website for ABK Food Services - your trusted pickup partner i
 
 ## Deployment
 
-This project is configured for deployment on Replit with custom domain support.
+This project is configured for deployment on GitHub Pages with GitHub Actions.
 
-Visit us at: [abkfoodservices.com](https://abkfoodservices.com)
+- **Repository**: https://github.com/ABKGlobaltech123/abkfoodservices
+- **Live Site**: [abkfoodservices.com](https://abkfoodservices.com)
+- **GitHub Pages URL**: https://abkglobaltech123.github.io/abkfoodservices
+
+### DNS Configuration for Custom Domain
+Configure these DNS records at your domain registrar:
+- **A Records**: Point to GitHub Pages IPs (185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153)
+- **CNAME**: www → abkglobaltech123.github.io
+
+The site automatically deploys when changes are pushed to the main branch.
 
 ---
 
