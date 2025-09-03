@@ -21,37 +21,46 @@ export function Header() {
 
   return (
     <>
-      <header className="bg-white shadow-sm fixed w-full top-0 z-50">
+      <header className="bg-gradient-to-r from-white via-orange-50 to-white shadow-lg backdrop-blur-md fixed w-full top-0 z-50 border-b border-orange-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-18">
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/">
-                <div className="flex items-center space-x-3 cursor-pointer">
-                  <img 
-                    src={abkLogo} 
-                    alt="ABK Food Services Logo" 
-                    className="w-12 h-12 hover:scale-105 transition-transform duration-200"
-                  />
-                  <h1 className="text-2xl font-heading font-bold text-primary">
-                    ABK Food Services
-                  </h1>
+                <div className="flex items-center space-x-3 cursor-pointer group">
+                  <div className="relative">
+                    <img 
+                      src={abkLogo} 
+                      alt="ABK Food Services Logo" 
+                      className="w-14 h-14 hover:scale-110 transition-all duration-300 drop-shadow-md group-hover:drop-shadow-lg"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-red-400/20 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="flex flex-col">
+                    <h1 className="text-2xl font-heading font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent group-hover:from-orange-700 group-hover:to-red-700 transition-all duration-300">
+                      ABK Food Services
+                    </h1>
+                    <p className="text-xs text-gray-600 font-medium">Fresh & Fast Delivery</p>
+                  </div>
                 </div>
               </Link>
             </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-8">
+            <nav className="hidden md:flex space-x-2">
               {navigation.map((item) => (
                 <Link key={item.name} href={item.href}>
                   <span
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors cursor-pointer ${
+                    className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer relative overflow-hidden ${
                       isActive(item.href)
-                        ? "text-primary font-semibold"
-                        : "text-gray-700 hover:text-primary"
+                        ? "bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-lg"
+                        : "text-gray-700 hover:bg-gradient-to-r hover:from-orange-100 hover:to-red-100 hover:text-orange-700"
                     }`}
                   >
                     {item.name}
+                    {isActive(item.href) && (
+                      <div className="absolute inset-0 bg-gradient-to-r from-orange-400 to-red-400 opacity-50 animate-pulse"></div>
+                    )}
                   </span>
                 </Link>
               ))}
@@ -60,7 +69,12 @@ export function Header() {
             {/* Right side actions */}
             <div className="flex items-center space-x-4">
               {/* Contact CTA */}
-              <Button size="sm" className="hidden sm:inline-flex">
+              <Button 
+                size="sm" 
+                onClick={() => window.open('tel:+918341051124', '_self')}
+                className="hidden sm:inline-flex bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold px-4 py-2 rounded-full shadow-lg hover:shadow-green-500/25 transition-all duration-300 border-none"
+              >
+                <span className="mr-2">📞</span>
                 Call Now: +91 8341051124
               </Button>
 
