@@ -35,12 +35,12 @@ export function HomePage() {
           
           {/* Main Heading with Enhanced Typography */}
           <div className="mb-8">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-black mb-4 leading-tight">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-black mb-4 leading-tight">
               <span className="inline-block text-transparent bg-clip-text bg-gradient-to-r from-yellow-300 via-orange-300 to-red-400 drop-shadow-2xl">
                 ABK Food Services
               </span>
             </h1>
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white/95 tracking-wide">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white/95 tracking-wide">
               <span className="inline-block hover:scale-105 transition-transform duration-300">Authentic Flavors,</span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 inline-block hover:scale-105 transition-transform duration-300">
